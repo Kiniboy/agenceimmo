@@ -1,20 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+
+{% block title %}AGENCE JUMP IMMOBILIER{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/agenceimmo/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/agenceimmo/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+<div class="container">
+    <h1></h1>
+    <div class="jumbotron txt-center">
+        <h1>AGENCE JUMP IMMOBILIER</h1>
+        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker</p>
+    </div>
+    <h2>Les derniers biens mis en ligne</h2>
+    <div class="row flex mt-4">
+        {% for property in properties %}
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{{ path('show', {id: property.id, slug: property.slug}) }}">{{ property.title }}</a></h5>
+                        <p class="card-text">{{ property.city }} ({{ property.postalCode }})</p>
+                        <div class="text-primary"> T{{ property.rooms }} | Surface : {{ property.surface }} m²</div>
+                        <div class="text-danger" style="font-size: 2rem; font-weight: bold">{{ property.getFormattedPrice }} €</div>
+                        <div class="text-primary mt-4"> {{ property.description }}</div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

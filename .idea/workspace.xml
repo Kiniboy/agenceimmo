@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d3967b6-7d4a-4212-a5e9-2bfe49069788" name="Default Changelist" comment="" />
+    <list default="true" id="1d3967b6-7d4a-4212-a5e9-2bfe49069788" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/house.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/PropertyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/property/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/agenceimmo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agenceimmo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +47,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -112,6 +152,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jQI8dCQbpnCTzubZCZkQZcdIlR" />
@@ -122,8 +165,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\agenceimmo\templates" />
+      <recent name="C:\wamp64\www\agenceimmo\assets\images" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -134,21 +191,78 @@
       <option name="presentableId" value="Default" />
       <updated>1603729731727</updated>
       <workItem from="1603729732964" duration="307000" />
-      <workItem from="1603730047082" duration="966000" />
+      <workItem from="1603730047082" duration="1719000" />
+      <workItem from="1603731778152" duration="108000" />
+      <workItem from="1603786113542" duration="20587000" />
+      <workItem from="1603814628264" duration="5203000" />
+      <workItem from="1603871071592" duration="23804000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2315" y="91" key="#Inspections" timestamp="1603891772210">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="2315" y="91" key="#Inspections/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603891772210" />
     <state x="716" y="340" key="#Notifications" timestamp="1603730075931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="716" y="340" key="#Notifications/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603730075931" />
+    <state x="2419" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603804192255">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="2419" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603804192255" />
+    <state width="1493" height="204" key="GridCell.Tab.0.bottom" timestamp="1603814578995">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="204" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603814578995" />
+    <state width="1493" height="204" key="GridCell.Tab.0.center" timestamp="1603814578995">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="204" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603814578995" />
+    <state width="1493" height="204" key="GridCell.Tab.0.left" timestamp="1603814578994">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="204" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603814578994" />
+    <state width="1493" height="204" key="GridCell.Tab.0.right" timestamp="1603814578995">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="204" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603814578995" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1603730039888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603730039888" />
+    <state x="2291" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603797057510">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="2291" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603797057510" />
+    <state x="2038" y="129" width="1202" height="566" key="find.popup" timestamp="1603804940530">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="2038" y="129" width="1202" height="566" key="find.popup/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603804940530" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1603803306084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603803306084" />
+    <state x="539" y="191" width="840" height="848" key="search.everywhere.popup" timestamp="1603813841059">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="191" width="840" height="848" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603813841059" />
+    <state x="2351" y="153" width="672" height="678" key="search.everywhere.popup/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603798262738" />
   </component>
 </project>
