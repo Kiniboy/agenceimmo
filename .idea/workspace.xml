@@ -20,19 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d3967b6-7d4a-4212-a5e9-2bfe49069788" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201105121046.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/agenceimmo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agenceimmo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +204,7 @@
       <workItem from="1604066166246" duration="5070000" />
       <workItem from="1604071990567" duration="7179000" />
       <workItem from="1604339456541" duration="4372000" />
-      <workItem from="1604572729283" duration="13638000" />
+      <workItem from="1604572729283" duration="18131000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 2 creation home page mes biens pages mon bien page">
       <created>1603896862671</created>
@@ -243,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604577029686</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit auth and user">
+      <created>1604588832873</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604588832873</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit auth and user 2">
+      <created>1604588844284</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604588844284</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +272,9 @@
     <MESSAGE value="Commit 3 creation home page mes biens pages mon bien page" />
     <MESSAGE value="Comiit 30 10 test controller usage formulaire" />
     <MESSAGE value="Commit creation admin add edit cancel un bien et regle de validation champs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit creation admin add edit cancel un bien et regle de validation champs" />
+    <MESSAGE value="Commit auth and user" />
+    <MESSAGE value="Commit auth and user 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit auth and user 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="494" y="114" key="#Inspections" timestamp="1603980679547">
@@ -324,11 +331,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="47" y="32" width="1835" height="973" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603991503203" />
-    <state x="-1559" y="449" key="Vcs.Push.Dialog.v2" timestamp="1604577040301">
-      <screen x="-1920" y="310" width="1536" height="824" />
+    <state x="451" y="176" key="Vcs.Push.Dialog.v2" timestamp="1604588866448">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1559" y="449" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@-1920.310.1536.824" timestamp="1604577040301" />
-    <state x="451" y="176" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@0.0.1920.1040" timestamp="1604074247981" />
+    <state x="451" y="176" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@0.0.1920.1040" timestamp="1604588866448" />
     <state x="2281" y="141" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603896894804" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603961027792">
       <screen x="0" y="0" width="1920" height="1040" />
