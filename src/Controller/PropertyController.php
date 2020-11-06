@@ -20,9 +20,10 @@ class PropertyController extends AbstractController
     public function index (PropertyRepository $propertyRepository) : Response
     {
         $em = $this->getDoctrine()->getManager();
-        $property = $propertyRepository->findAllVisible();
+        $properties = $propertyRepository->findAllVisible();
         return new Response($this->render('property/index.html.twig', [
-            'current_menu' => 'properties'
+            'current_menu' => 'properties',
+                'properties' => $properties
             ]
         ));
     }
