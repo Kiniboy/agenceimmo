@@ -20,14 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d3967b6-7d4a-4212-a5e9-2bfe49069788" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/PropertyFixture.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/property/_property.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/knp_paginator.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/agenceimmo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agenceimmo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PropertyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PropertyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PropertyRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/property/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/property/index.html.twig" afterDir="false" />
     </list>
@@ -150,6 +151,8 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jQI8dCQbpnCTzubZCZkQZcdIlR" />
@@ -212,7 +215,7 @@
       <workItem from="1604071990567" duration="7179000" />
       <workItem from="1604339456541" duration="4372000" />
       <workItem from="1604572729283" duration="19268000" />
-      <workItem from="1604666893750" duration="2879000" />
+      <workItem from="1604666893750" duration="6490000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 2 creation home page mes biens pages mon bien page">
       <created>1603896862671</created>
@@ -263,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604593320773</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Feature listing property">
+      <created>1604669981727</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604669981727</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +300,8 @@
     <MESSAGE value="Commit auth and user" />
     <MESSAGE value="Commit auth and user 2" />
     <MESSAGE value="Commit auth and user fonctionnal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit auth and user fonctionnal" />
+    <MESSAGE value="Feature listing property" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature listing property" />
   </component>
   <component name="WindowStateProjectService">
     <state x="494" y="114" key="#Inspections" timestamp="1603980679547">
@@ -347,10 +358,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="47" y="32" width="1835" height="973" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603991503203" />
-    <state x="-1559" y="449" key="Vcs.Push.Dialog.v2" timestamp="1604593341667">
+    <state x="-1559" y="449" key="Vcs.Push.Dialog.v2" timestamp="1604669986414">
       <screen x="-1920" y="310" width="1536" height="824" />
     </state>
-    <state x="-1559" y="449" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@-1920.310.1536.824" timestamp="1604593341667" />
+    <state x="-1559" y="449" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@-1920.310.1536.824" timestamp="1604669986414" />
     <state x="451" y="176" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@0.0.1920.1040" timestamp="1604588866448" />
     <state x="2281" y="141" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603896894804" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603961027792">
