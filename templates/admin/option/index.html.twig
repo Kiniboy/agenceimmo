@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}GÉRER LES OPTIONS{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>GÉRER LES OPTIONS</h1>
+
+        {%  for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <table class="table table-stripped">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for option in options %}
+            <tr>
+                <td>{{ option.name }}</td>
+                <td>
+                    <a href="{{ path('admin_option_edit', {id: option.id}) }}" class="btn btn-secondary">Éditer</a>
+                    <form method="post" action="{{ path('admin_option_delete', {id: option.id}) }}" class="action" style="display: inline-block" onsubmit="return confirm('Êtes-vous vraiment sur ?)">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete') }}">
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="text-right">
+            <a href="{{ path('admin_option_new') }}" class="btn btn-primary">Créer une nouvelle option</a>
+        </div>
+    </div>
+{% endblock %}

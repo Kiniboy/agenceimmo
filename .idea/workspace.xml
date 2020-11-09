@@ -20,15 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d3967b6-7d4a-4212-a5e9-2bfe49069788" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entity/PropertySearcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/PropertySearcherType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/KnpPaginatorBundle.fr.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201109143006.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AdminOptionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Option.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/OptionType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/OptionRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/option/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/option/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/option/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/option/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PropertyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPropertiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPropertiesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Property.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/PropertySearcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PropertySearcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PropertySearcherType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PropertySearcherType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PropertyType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PropertyType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/PropertyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PropertyRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/property/_property.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/property/_property.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/properties/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/properties/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/properties/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/properties/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/properties/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/properties/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/property/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/property/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/form.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/form.fr.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +177,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin/option" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,13 +189,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\agenceimmo\src\Controller\Admin" />
-      <recent name="C:\wamp64\www\agenceimmo\src\Controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\agenceimmo\templates\admin\option" />
       <recent name="C:\wamp64\www\agenceimmo\templates" />
       <recent name="C:\wamp64\www\agenceimmo\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\agenceimmo\templates\admin" />
+      <recent name="C:\wamp64\www\agenceimmo\src\Controller\Admin" />
+      <recent name="C:\wamp64\www\agenceimmo\src\Controller" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -214,7 +228,7 @@
       <workItem from="1604339456541" duration="4372000" />
       <workItem from="1604572729283" duration="19268000" />
       <workItem from="1604666893750" duration="11019000" />
-      <workItem from="1604909041412" duration="10350000" />
+      <workItem from="1604909041412" duration="18852000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 2 creation home page mes biens pages mon bien page">
       <created>1603896862671</created>
@@ -279,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604676212393</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Feature filtrage des biens">
+      <created>1604927827429</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604927827429</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +329,8 @@
     <MESSAGE value="Commit auth and user fonctionnal" />
     <MESSAGE value="Feature listing property" />
     <MESSAGE value="Feature mise en place pagination page voir mes biens" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature mise en place pagination page voir mes biens" />
+    <MESSAGE value="Feature filtrage des biens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature filtrage des biens" />
   </component>
   <component name="WindowStateProjectService">
     <state x="494" y="114" key="#Inspections" timestamp="1603980679547">
@@ -324,10 +346,11 @@
       <screen x="1920" y="0" width="1536" height="832" />
     </state>
     <state x="2406" y="210" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603899657407" />
-    <state x="245" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604065011334">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2116" y="163" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604929104576">
+      <screen x="1920" y="163" width="1536" height="832" />
     </state>
     <state x="245" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.310.1536.824@0.0.1920.1040" timestamp="1604065011334" />
+    <state x="2116" y="163" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.163.1536.832/0.0.1920.1040@1920.163.1536.832" timestamp="1604929104576" />
     <state x="-1421" y="475" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604580315710">
       <screen x="-1920" y="310" width="1536" height="824" />
     </state>
@@ -366,12 +389,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="47" y="32" width="1835" height="973" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603991503203" />
-    <state x="-1559" y="449" key="Vcs.Push.Dialog.v2" timestamp="1604676217412">
-      <screen x="-1920" y="310" width="1536" height="824" />
+    <state x="2281" y="303" key="Vcs.Push.Dialog.v2" timestamp="1604927834495">
+      <screen x="1920" y="163" width="1536" height="832" />
     </state>
     <state x="-1559" y="449" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@-1920.310.1536.824" timestamp="1604676217412" />
     <state x="451" y="176" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.310.1536.824@0.0.1920.1040" timestamp="1604588866448" />
     <state x="2281" y="141" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1603896894804" />
+    <state x="2281" y="303" key="Vcs.Push.Dialog.v2/1920.163.1536.832/0.0.1920.1040@1920.163.1536.832" timestamp="1604927834495" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603961027792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

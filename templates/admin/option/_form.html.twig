@@ -1,0 +1,8 @@
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_rest(form) }}
+    <button class="btn btn-primary mt-4 mb-4">{{ button|default('Enregistrer') }}</button>
+    {{ form_end(form) }}
+
+{% endblock %}
+
