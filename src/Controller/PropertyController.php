@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Entity\Property;
+use App\Entity\PropertySearcher;
+use App\Form\PropertySearcherType;
 use App\Repository\PropertyRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -23,17 +25,30 @@ class PropertyController extends AbstractController
      */
     public function index (PropertyRepository $propertyRepository, PaginatorInterface $paginator, Request $request) : Response
     {
+        // Gerer le traitement du formulaire de filtrage
+
+        $search = new PropertySearcher();
+        $form = $this->createForm(PropertySearcherType::class, $search);
+        $form->handleRequest($request);
+
+        //////////
+
         $em = $this->getDoctrine()->getManager();
+
+        // Gérer la pagination
+
         $properties = $paginator->paginate(
-            $properties = $propertyRepository->findAllVisibleQuery(),
+            $properties = $propertyRepository->findAllVisibleQuery($search),
             $request->query->getInt('page',1),12
         );
+        ////////
 
 
 
         return new Response($this->render('property/index.html.twig', [
             'current_menu' => 'properties',
-                'properties' => $properties
+                'properties' => $properties,
+                'form' => $form->createView()
             ]
         ));
     }
@@ -48,6 +63,8 @@ class PropertyController extends AbstractController
      */
     public function show(PropertyRepository $propertyRepository, Property $property, string $slug, $id): Response
     {
+        // Mise en place des slugs
+
         if($property->getSlug() !== $slug)
         {
             return $this->redirectToRoute('show',[
@@ -55,6 +72,9 @@ class PropertyController extends AbstractController
                 'slug' => $property->getSlug()
             ], 301);
         }
+
+        /////////////////////////////
+        ///
         $em = $this->getDoctrine()->getManager();
         $property = $propertyRepository->find($id);
         return $this->render('property/show.html.twig', [
