@@ -28,6 +28,7 @@ class AdminPropertiesController extends AbstractController
         return $this->render('admin/properties/index.html.twig', compact('properties'));
     }
 
+    //////// CREER UN BIEN //////////
 
     /**
      * @Route ("/admin/property/new", name="admin_property_new")
@@ -57,6 +58,8 @@ class AdminPropertiesController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    //////// EDITER UN BIEN //////////
 
 
     /**
@@ -89,6 +92,8 @@ class AdminPropertiesController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    //////// SUPPRIMER UN BIEN //////////
 
     /**
      * @Route("/admin/property/{id}", name="admin_property_delete", methods={"DELETE"})

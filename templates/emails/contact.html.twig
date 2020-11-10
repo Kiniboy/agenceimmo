@@ -1,0 +1,32 @@
+<mjml>
+    <mj-body>
+
+        <mj-section>
+            <mj-column>
+                <mj-image width="100px" src="./images/mail/logo.jpg"></mj-image>
+                <mj-divider border-color="#F45E43"></mj-divider>
+                <mj-text font-size="20px" color="#F45E43" font-family="helvetica">Jump Immo</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section background-color="#f0f0f0">
+            <mj-column>
+                <mj-text color="#525252">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Nom du bien</td>
+                            <td><a href="{{ url('show', {id: contact.property.id, slug: contact.property.slug}) }}">
+                                    {{ contact.property.title }}
+                                </a></td>
+                        </tr>
+                        <tr><td>Prénom</td><td>{{ contact.firstname }}</td></tr>
+                        <tr><td>Nom</td><td>{{ contact.lastname }}</td></tr>
+                        <tr><td>Téléphone</td><td>{{ contact.email }}</td></tr>
+                        <tr><td>Email</td><td>{{ contact.phone }}</td></tr>
+                        </tbody>
+                    </table>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

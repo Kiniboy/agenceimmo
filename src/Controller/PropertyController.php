@@ -1,9 +1,11 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Contact;
 use App\Entity\Property;
 use App\Entity\PropertySearcher;
-use App\Form\PropertySearcherType;
+use App\Form\ContactType;
+use App\Notification\ContactNotification;
 use App\Repository\PropertyRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,7 +30,7 @@ class PropertyController extends AbstractController
         // Gerer le traitement du formulaire de filtrage
 
         $search = new PropertySearcher();
-        $form = $this->createForm(PropertySearcherType::class, $search);
+        $form = $this->createForm(ContactType::class, $search);
         $form->handleRequest($request);
 
         //////////
@@ -59,9 +61,11 @@ class PropertyController extends AbstractController
      * @param Property $property
      * @param string $slug
      * @param $id
+     * @param Request $request
+     * @param ContactNotification $notification
      * @return Response
      */
-    public function show(PropertyRepository $propertyRepository, Property $property, string $slug, $id): Response
+    public function show(PropertyRepository $propertyRepository, Property $property, string $slug, $id, Request $request, ContactNotification $notification): Response
     {
         // Mise en place des slugs
 
@@ -73,13 +77,32 @@ class PropertyController extends AbstractController
             ], 301);
         }
 
+        ///////// Import Contact et Form de Contact //////////////
+
+        $contact = new Contact();
+        $contact->setProperty($property);
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $notification->notify($contact);
+            $this->addFlash('success', 'Votre email a bien été envoyé');
+            return $this->redirectToRoute('show', [
+               'id' => $property->getId(),
+               'slug' => $property->getSlug()
+            ]);
+        }
+
+
         /////////////////////////////
         ///
         $em = $this->getDoctrine()->getManager();
         $property = $propertyRepository->find($id);
         return $this->render('property/show.html.twig', [
             'property'=>$property,
-            'current_menu' => 'properties'
+            'current_menu' => 'properties',
+            'form' => $form->createView()
         ]);
+
+
     }
 }

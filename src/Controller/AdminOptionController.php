@@ -27,6 +27,8 @@ class AdminOptionController extends AbstractController
         ]);
     }
 
+    //////// CREER UNE OPTION //////////
+
     /**
      * @Route("/new", name="admin_option_new", methods={"GET","POST"})
      * @param Request $request
@@ -53,15 +55,17 @@ class AdminOptionController extends AbstractController
         ]);
     }
 
-//    /**
-//     * @Route("/{id}", name="option_show", methods={"GET"})
-//     */
-//    public function show(Option $option): Response
-//    {
-//        return $this->render('admin/option/show.html.twig', [
-//            'option' => $option,
-//        ]);
-//    }
+    //    /**
+    //     * @Route("/{id}", name="option_show", methods={"GET"})
+    //     */
+    //    public function show(Option $option): Response
+    //    {
+    //        return $this->render('admin/option/show.html.twig', [
+    //            'option' => $option,
+    //        ]);
+    //    }
+
+    //////// EDITER UNE OPTION //////////
 
     /**
      * @Route("/{id}/edit", name="admin_option_edit", methods={"GET","POST"})
@@ -86,6 +90,8 @@ class AdminOptionController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    //////// SUPPRIMER UNE OPTION //////////
 
     /**
      * @Route("/{id}", name="admin_option_delete", methods={"DELETE"})
