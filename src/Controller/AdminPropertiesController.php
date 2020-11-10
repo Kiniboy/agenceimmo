@@ -70,10 +70,6 @@ class AdminPropertiesController extends AbstractController
      */
     public function edit(PropertyRepository $propertyRepository, Property $property, int $id, PropertyType $form, Request $request): Response
     {
-//
-//        $option = new Option();
-//        $property->addOption($option);
-
         $em = $this->getDoctrine()->getManager();
         $property = $propertyRepository->find($id);
 
