@@ -16,8 +16,6 @@ use Cocur\Slugify\Slugify;
 
 class PropertyController extends AbstractController
 {
-
-
     /**
      * @Route("/biens", name="properties")
      * @param PropertyRepository $propertyRepository
@@ -33,7 +31,6 @@ class PropertyController extends AbstractController
         $form = $this->createForm(ContactType::class, $search);
         $form->handleRequest($request);
 
-        //////////
 
         $em = $this->getDoctrine()->getManager();
 
@@ -43,9 +40,6 @@ class PropertyController extends AbstractController
             $properties = $propertyRepository->findAllVisibleQuery($search),
             $request->query->getInt('page',1),12
         );
-        ////////
-
-
 
         return new Response($this->render('property/index.html.twig', [
             'current_menu' => 'properties',
@@ -92,9 +86,6 @@ class PropertyController extends AbstractController
             ]);
         }
 
-
-        /////////////////////////////
-        ///
         $em = $this->getDoctrine()->getManager();
         $property = $propertyRepository->find($id);
         return $this->render('property/show.html.twig', [
@@ -102,7 +93,5 @@ class PropertyController extends AbstractController
             'current_menu' => 'properties',
             'form' => $form->createView()
         ]);
-
-
     }
 }

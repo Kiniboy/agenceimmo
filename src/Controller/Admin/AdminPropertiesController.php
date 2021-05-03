@@ -1,16 +1,13 @@
 <?php
 namespace App\Controller;
 
-use App\Entity\Option;
 use App\Entity\Property;
 use App\Form\PropertyType;
 use App\Repository\PropertyRepository;
-use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Doctrine\ORM\EntityManagerInterface;
 
 
 class AdminPropertiesController extends AbstractController
@@ -20,7 +17,7 @@ class AdminPropertiesController extends AbstractController
      * @param PropertyRepository $propertyRepository
      * @return Response
      */
-    public function index(PropertyRepository $propertyRepository)
+    public function index(PropertyRepository $propertyRepository): Response
     {
         $em = $this->getDoctrine()->getManager();
         $this->getDoctrine()->getManager();
@@ -51,7 +48,6 @@ class AdminPropertiesController extends AbstractController
             $em->flush();
             $this->addFlash('success','Bien créé avec succès !');
             return new Response($this->redirectToRoute('admin'));
-
         }
         return $this->render('admin/properties/new.html.twig',[
             'property'=> $property,
@@ -84,7 +80,6 @@ class AdminPropertiesController extends AbstractController
             $em->flush();
             $this->addFlash('success','Bien modifié avec succès !');
             return new Response($this->redirectToRoute('admin'));
-
         }
 
         return $this->render('admin/properties/edit.html.twig',[

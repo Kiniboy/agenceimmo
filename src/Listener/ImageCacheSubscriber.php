@@ -62,9 +62,6 @@ class ImageCacheSubscriber implements EventSubscriber
     }
 
 
-    //// Pour faire fonctionner, il me faut trouver une solution pour Utiliser la fonction getEntity()
-    /// qui est senser découler de PreFlushEventArgs
-
     /**
      * @param LifecycleEventArgs $args
      */

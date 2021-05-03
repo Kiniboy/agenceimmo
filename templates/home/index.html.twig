@@ -2,6 +2,9 @@
 
 
 {% block title %}AGENCE JUMP IMMOBILIER{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="../../public/css/style.css">
+{% endblock %}
 
 {% block body %}
 <div class="container">
@@ -19,7 +22,7 @@
                         <h5 class="card-title"><a href="{{ path('show', {id: property.id, slug: property.slug}) }}">{{ property.title }}</a></h5>
                         <p class="card-text">{{ property.city }} ({{ property.postalCode }})</p>
                         <div class="text-primary"> T{{ property.rooms }} | Surface : {{ property.surface }} m²</div>
-                        <div class="text-danger" style="font-size: 2rem; font-weight: bold">{{ property.getFormattedPrice }} €</div>
+                        <div class="text-primary" style="font-size: 2rem; font-weight: bold">{{ property.getFormattedPrice }} €</div>
                     </div>
                 </div>
             </div>
